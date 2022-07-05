@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnine</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="CSS/Style.css">
+
+    <!-- Icon css -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  ftco-navbar-light">
+        <div class="container-xl">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <div class="nav-item dropdown">
+                        <button class="nav-link dropbtn">Categories <i class="fa fa-caret-down"></i></button>
+                        <div class="nav-item dropdown-content">
+                            <a class="nav-link" href="/UI-UX Design">UI/UX Design</a>
+                            <a class="nav-link" href="/Art & Design">Art &amp; Design</a>
+                            <a class="nav-link" href="/Computer Science">Computer Science</a>
+                            <a class="nav-link" href="/Software Engineering">Software Engineering</a>
+                            <a class="nav-link" href="/Information Software">Information Software</a>
+                            <a class="nav-link" href="/Health & Fitness">Health &amp; Fitness</a>
+                            <a class="nav-link" href="/Marketing">Marketing</a>
+                            <a class="nav-link" href="/Graphic Design">Graphic Design</a>
+                            <a class="nav-link" href="/Music">Music</a>
+                            <a class="nav-link" href="/Business">Business</a>
+                         </div>
+                    </div> 
+                    <% if(o6u) { %>
+                        <li class="nav-item"><a class="nav-link" href="/O6UCourses">O6U Courses</a></li>
+                    <% } %>
+                    
+                    <li class="nav-item"><a class="nav-link" href="/About">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/Pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Journal">Journal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Contact">Contact</a></li>
+
+                    <% if(admin) { %>
+                        <div class="nav-item dropdown ml-5">
+                            <button class="nav-link dropbtn"><i class="fa fa-caret-down"></i></button>
+                            <div class="nav-item dropdown-content dropdown-content0">
+                                <a class="nav-link" href="/options">Upload &amp; Delete</a>
+                                <a class="nav-link" href="/profile">My Profile</a>
+                                <a class="nav-link" href="/logout">Log out</a>
+                            </div>
+                        </div>
+                    <% } %>
+                   
+
+                    <% if(sessionIsActive) { %>
+                    
+                        <div class="nav-item dropdown d-nonee">
+                            <button class="nav-link dropbtn"><i class="fa fa-caret-down"></i></button>
+                            <div class="nav-item dropdown-content dropdown-content0">
+                                <a class="nav-link" href="/profile">My Profile</a>
+                                <a class="nav-link" href="/logout">Log out</a>
+                            </div>
+                        </div>
+                    
+                    <% } else { %>
+                        <div class="nav-item dropdown d-nonee">
+                            <button class="nav-link dropbtn"><i class="fa fa-caret-down"></i></button>
+                            <div class="nav-item dropdown-content dropdown-content0">
+                                <a class="nav-link" href="/SignIn">SignIn</a>
+                                <a class="nav-link" href="/SignUp">SignUp</a>
+                            </div>
+                        </div>
+                    <% } %>
+
+                </ul>
+                <% if(admin === false) { %>
+                    <% if(sessionIsActive) { %>
+                    
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0 d-contents d-none">
+                            <li class="nav-item"><a class="nav-link" href="/profile">My Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
+                        </div>
+                    
+                    <% } else { %>
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0 d-contents d-none">
+                            <li class="nav-item"><a class="nav-link" href="/SignIn">SignIn</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/SignUp">SignUp</a></li>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-wrap hero-wrap-2 back-ground2" style="background-image: url(images/12.webp)">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 pt-5 mt-5 text-center">
+                    <p class="breadcrumbs"><span class="me-2"><a href="/">Home <i
+                                    class="fa fa-chevron-right"></i></a></span> <span>Pricing <i
+                                class="fa fa-chevron-right"></i></span></p>
+                    <h1 class="mb-0 bread">Choose The Right Plan</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block">Basic Plan</span>
+                            <span class="price"><sup>$</sup> <span class="number">49</span></span>
+                            <div class="p-4 px-lg-5">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                    Consonantia, there live the blind texts.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-outline-primary d-block py-3">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block">Beginner Plan</span>
+                            <span class="price"><sup>$</sup> <span class="number">79</span></span>
+                            <div class="p-4 px-lg-5">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                    Consonantia, there live the blind texts.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-outline-primary d-block py-3">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block">Premium Plan</span>
+                            <span class="price"><sup>$</sup> <span class="number">109</span></span>
+                            <div class="p-4 px-lg-5">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                    Consonantia, there live the blind texts.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-outline-primary d-block py-3">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block">Ultimate Plan</span>
+                            <span class="price"><sup>$</sup> <span class="number">149</span></span>
+                            <div class="p-4 px-lg-5">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                    Consonantia, there live the blind texts.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-outline-primary d-block py-3">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-intro py-5 bg-primary">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-lg-5">
+                        <div class="col-md-7 text-lg-right">
+                            <h2 class="mb-0">Newsletter - Stay tune and get the latest update</h2>
+                            <p>Far far away, behind the word mountains</p>
+                        </div>
+                        <div class="col-md-5 border-left d-flex align-items-center">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex align-items-center">
+                                    <input type="email" class="form-control" placeholder="Enter email address">
+                                    <a href="#" class="btn-icon"><span class="fa fa-paper-plane"></span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer">
+        <div class="container-xl">
+            <div class="row mb-5 justify-content-between">
+                <div class="col-md-99 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 logo d-flex">
+                            <a class="navbar-brand align-items-center" href="/">
+                                Learnine
+                                <span>Online Education &amp; Learning</span>
+                            </a>
+                        </h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        </p>
+                        <ul class="ftco-footer-social list-unstyled mt-2">
+                            <li><a href="#"><span class="fa-brands fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-99 col-lg-2">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Explore</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="/About"><span class="fas fa-arrow-right me-2"></span>About Us</a></li>
+                            <li><a href="/Pricing"><span class="fas fa-arrow-right me-2"></span>Pricing</a></li>
+                            <li><a href="/Categories"><span class="fas fa-arrow-right me-2"></span>Courses</a></li>
+                            <li><a href="/Journal"><span class="fas fa-arrow-right me-2"></span>Blog</a></li>
+                            <li><a href="/Contact"><span class="fas fa-arrow-right me-2"></span>Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-99 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Recent Posts</h2>
+                        <div class="block-21 mb-4 d-flex">
+                            <a class="blog-img img rounded" style="background-image:url(images/4.webp)"></a>
+                            <div class="text">
+                                <div class="meta">
+                                    <div><span class="fa fa-calendar"></span> Jan. 10, 2021</a></div>
+                                    <div><span class="fa fa-user"></span> Admin</a></div>
+                                </div>
+                                <h3 class="heading"><a href="/Journal">Creativity and Inspiration</a></h3>
+                            </div>
+                        </div>
+                        <div class="block-21 mb-4 d-flex">
+                            <a class="blog-img img rounded" style="background-image:url(images/5.webp)"></a>
+                            <div class="text">
+                                <div class="meta">
+                                    <div><span class="fa fa-calendar"></span> Jan. 11, 2021</a></div>
+                                    <div><span class="fa fa-user"></span> Admin</a></div>
+                                </div>
+                                <h3 class="heading"><a href="/Journal">Creativity and Inspiration</a></h3>
+                            </div>
+                        </div>
+                        <div class="block-21 mb-4 d-flex">
+                            <a class="blog-img img rounded" style="background-image:url(images/7.webp)"></a>
+                            <div class="text">
+                                <div class="meta">
+                                    <div><span class="fa fa-calendar"></span> Jan. 13, 2021</a></div>
+                                    <div><span class="fa fa-user"></span> Admin</a></div>
+                                </div>
+                                <h3 class="heading"><a href="/Journal">Creativity and Inspiration</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-99 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain
+                                        View, San Francisco, California, USA</span></li>
+                                <li><span class="icon fa fa-phone"></span><span class="text">+2 392 3929
+                                            210</span></a></li>
+                                <li><a href="/Contact"><span class="icon fa fa-paper-plane"></span><span class="text"><span
+                                                class="__cf_email__"
+                                                data-cfemail="6d04030b022d1402181f0902000c0403430e0200">
+                                                info@yourdomain.com</span></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/glightbox.min.js+aos.js+google-map.js+main.js.pagespeed.jc.CNHUYLpEWQ.js"></script>
+    <script>
+        eval(mod_pagespeed_7_hPlGGYt1);
+    </script>
+    <script>
+        eval(mod_pagespeed_QuG92EaMQX);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
+    </script>
+    <script>
+        eval(mod_pagespeed_mTpoFW8ALW);
+    </script>
+    <script>
+        eval(mod_pagespeed_omftQ6ch3C);
+    </script>
+
+</body>
+
+</html>
